@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas X_TPK1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eef1f3b4;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+        .card-container {
+            display: none; /* Awalnya disembunyikan */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); /* Ukuran kartu */
+            box-sizing: border-box;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function toggleCards(cardType) {
+            const cardContainers = ['siswaCards', 'guruCards', 'piketCards', 'strukturCards', 'gallery', 'jadwalPelajaran', 'kegiatanKelas'];
+
+            // Sembunyikan semua kartu
+            cardContainers.forEach(id => {
+                const container = document.getElementById(id);
+                if (container) {
+                    container.style.display = id === cardType ? "flex" : "none";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Website Kelas X_TPK1</h1>
+
+        <div class="button-container">
+            <button onclick="toggleCards('siswaCards')" style="background-color: #4CAF50; color: white;">Data Siswa</button>
+<button onclick="toggleCards('guruCards')" style="background-color: #2196F3; color: white;">Data Guru</button>
+<button onclick="toggleCards('piketCards')" style="background-color: #FF9800; color: white;">Piket Kelas</button>
+<button onclick="toggleCards('strukturCards')" style="background-color: #9C27B0; color: white;">Struktur Kelas</button>
+<button onclick="toggleCards('gallery')" style="background-color: #f44336; color: white;">Galeri Foto</button>
+<button onclick="toggleCards('jadwalPelajaran')" style="background-color: #3F51B5; color: white;">Jadwal Pelajaran</button>
+<button onclick="toggleCards('kegiatanKelas')" style="background-color: #795548; color: white;">Kegiatan Kelas</button>
+
+            </div>
+
+        <div id="siswaCards" class="card-container">
+            <div class="card">
+                <img src="abdul rokhim2.jpg"alt="abdul rokhim2">
+                <h3>ABDUL ROKHIM</h3>
+                <p>Kelas: X-TPK 1</p>
+                <p>No.Absen: 01</p>
+                <p>Tanggal lahir:12-11-2008</p>
+                <p>Alamat:Desa Mliwang RT01 RW02 KEC.KEREK</p>
+                <p>NISN:0086778701</p>
+            </div>
+            <div class="card">
+                <img src="ahmad nurul2.jpg"alt="ahmad nurul2">
+                <h3>ACHMAD NURUL KHAROMAIN</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen: 02</p>
+                <p>Tanggal lahir:10-12-2008</p>
+                <p>Alamat:Desa Klutuk RT05 RW01 KEC.TAMBAKBOYO</p>
+                <p>NISN:0087489237</p>
+            </div>
+            <div class="card">
+                <img src="agus bramono.jpg"alt="agus bramono">
+                <h3>AGUS BRAMONO</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:03</p>
+                <p>Tanggal lahir:19-08-2008</p>
+                <p>Alamat:Desa Remen RT03 RW07 KEC.JENU</p>
+                <p>NISN:0081325618</p>
+            </div>
+            <div class="card">
+                <img src="agus indra2.jpg"alt="agus indra2">
+                <h3>AGUS INDRA KURNIAWAN</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:04</p>
+                <p>Tanggal lahir:01-08-2008</p>
+                <p>Alamat:Desa Bogorejo KEC.BANCAR</p>
+                <p>NISN:0082738125</p>
+            </div>
+            <div class="card">
+                <img src="5.AHMAD ANDY DWI PRASETYO.jpg"alt="5.AHMAD ANDY DWI PRASETYO">
+                <h3>AHMAD ANDY DWI PRASETYO</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:05</p>
+                <p>Tanggal lahir:20-02-2009</p>
+                <p>Alamat:Desa Gadon RT04 RW01 KEC.TAMBAKBOYO</p>
+                <p>NISN:0093147543</p>
+            </div>
+            <div class="card">
+                <img src="6.AHMAD BA'IM.jpg"alt="6.AHMAD BA'IM">
+                <h3>AHMAD BA'IM</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:06</p>
+                <p>Tanggal lahir:15-07-2009</p>
+                <p>Alamat:Desa Wolutengah RT02 RW02 KEC.KEREK</p>
+                <p>NISN:3092179971</p>
+            </div>
+            <div class="card">
+                <img src="7.AHMAD REYHAN SYAHPUTRA.jpg"alt="7.AHMAD REYHAN SYAHPUTRA">
+                <h3>AHMAD REYHAN SYAHPUTRA</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:07</p>
+                <p>Tanggal lahir:05-01-2009</p>
+                <p>Alamat:Desa Boncong KEC.BANCAR</p>
+                <p>NISN:0095412801</p>
+            </div>
+            <div class="card">
+                <img src="8.AHMADA ROMADLON ANSYAH WAFA.jpg"alt="8.AHMADA ROMADLON ANSYAH WAFA">
+                <h3>AHMADA ROMADLON ANSYAH WAFA</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:08</p>
+                <p>Tanggal lahir:14-09-2008</p>
+                <p>Alamat:Desa Merkawang RT05 RW02 KEC.TAMBAKBOYO</p>
+                <p>NISN:0088667972</p>
+            </div>
+            <div class="card">
+                <img src="9.ALIM NUR ROZIN.jpg"alt="9.ALIM NUR ROZIN">
+                <h3>ALIM NUR ROZIN</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:09</p>
+                <p>Tanggal lahir:01-02-2009</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0096318550</p>
+            </div>
+            <div class="card">
+                <img src="10.ANANTYA RESTI FAUZI.jpg"alt="10.ANANTYA RESTI FAUZI">
+                <h3>ANANTYA RESTI FAUZI</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:10</p>
+                <p>Tanggal lahir:07-03-2007</p>
+                <p>Alamat:Desa Purworejo RT07 RW02 KEC.JENU</p>
+                <p>NISN:0079662211</p>
+            </div>
+            <div class="card">
+                <img src="11.ANDIKA PRATAMA.jpg"alt="11.ANDIKA PRATAMA">
+                <h3>ANDIKA PRATAMA</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:11</p>
+                <p>Tanggal lahir:01-05-2009</p>
+                <p>Alamat:Desa Mliwang RT03 RW02 KEC.KEREK</p>
+                <p>NISN:0097385641</p>
+            </div>
+            <div class="card">
+                <img src="12.BAGUS KURNIYAWAN.jpg"alt="12.BAGUS KURNIYAWAN">
+                <h3>BAGUS KURNIYAWAN</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:12</p>
+                <p>Tanggal lahir:07-04-2009</p>
+                <p>Alamat:Desa Banjarejo RT19 RW06 KEC.BANCAR</p>
+                <p>NISN:0096925361</p>
+            </div>
+            <div class="card">
+                <img src="13.DA'I NUR TAUHID.jpg"alt="13.DA'I NUR TAUHID">
+                <h3>DA'I NUR TAUHID</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:13</p>
+                <p>Tanggal lahir:22-02-2009</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0096446001</p>
+            </div>
+            <div class="card">
+                <img src="14.DIAN RAMADHANI.jpg"alt="14.DIAN RAMADHANI">
+                <h3>DIAN RAMADHANI</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:14</p>
+                <p>Tanggal lahir:27-09-2008</p>
+                <p>Alamat:Desa Remen RT02 RW06 KEC.JENU</p>
+                <p>NISN:0089105319</p>
+            </div>
+            <div class="card">
+                <img src="15.DIKA BAGUS ARIFQI.jpg"alt="15.DIKA BAGUS ARIFQI">
+                <h3>DIKA BAGUS ARIFQI</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:15</p>
+                <p>Tanggal lahir:21-07-2008</p>
+                <p>Alamat:Desa Dasin RT01 RW05 KEC.TAMBAKBOYO</p>
+                <p>NISN:0085106460</p>
+            </div>
+            <div class="card">
+                <img src="16.DIMAS ARI WIBOWO.jpg"alt="16.DIMAS ARI WIBOWO">
+                <h3>DIMAS ARI WIBOWO</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:16</p>
+                <p>Tanggal lahir:18-01-2009</p>
+                <p>Alamat:Desa PuloGede RT01 RW02 KEC.TAMBAKBOYO</p>
+                <p>NISN:0091053136</p>
+            </div>
+            <div class="card">
+                <img src="17.DIMAS PUTRA SEPTIAWAN.jpg"alt="17.DIMAS PUTRA SEPTIAWAN">
+                <h3>DIMAS PUTRA SEPTIAWAN</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:17</p>
+                <p>Tanggal lahir:08-09-2007</p>
+                <p>Alamat:Desa Remen KEC.JENU</p>
+                <p>NISN:3079575737</p>
+            </div>
+            <div class="card">
+                <img src="18.DWI SEFI ANDIKA.jpg"alt="18.DWI SEFI ANDIKA">
+                <h3>DWI SEFI ANDIKA</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:18</p>
+                <p>Tanggal lahir:12-12-2008</p>
+                <p>Alamat:Desa Tasikharjo RT02 RW03 KEC.JENU</p>
+                <p>NISN:0088322364</p>
+            </div>
+            <div class="card">
+                <img src="19.FERI ARDI FIRMANSYAH.jpg"alt="19.FERI ARDI FIRMANSYAH">
+                <h3>FERI ARDI FIRMANSYAH</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:19</p>
+                <p>Tanggal lahir:30-08-2009</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0095614119</p>
+            </div>
+            <div class="card">
+                <img src="20.HENGKI SETIA PUTRA.jpg"alt="20.HENGKI SETIA PUTRA">
+                <h3>HENGKI SETIA PUTRA</h3>
+                <p>Kelas: X_TPK1</p>
+                <p>No.Absen:20</p>
+                <p>Tanggal lahir:07-09-2009</p>
+                <p>Alamat:Desa Trantang RT04 RW01 KEC.KEREK</p>
+                <p>NISN:0099021653</p>
+            </div>
+            <div class="card">
+                <img src="21.KAMAL YAIKA IBRAHIM.jpg"alt="21.KAMAL YAIKA IBRAHIM">
+                <h3>KAMAL YAIKA IBRAHIM</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:21</p>
+                <p>Tanggal lahir:10-03-2009</p>
+                <p>Alamat:Desa Wolutengah RT04 RW02 KEC.KEREK</p>
+                <p>NISN:0091840970</p>
+            </div>
+            <div class="card">
+                <img src="22.KHOIRIL JADID.jpg"alt="22.KHOIRIL JADID">
+                <h3>KHOIRIL JADID</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:22</p>
+                <p>Tanggal lahir:04-11-2008</p>
+                <p>Alamat:Dsn Binangun RT03 RW01 KEC.BANCAR</p>
+                <p>NISN:0082893829</p>
+            </div>
+            <div class="card">
+                <img src="23.KHOIRUL AMININ.jpg"alt="23.KHOIRUL AMININ">
+                <h3>KHOIRUL AMININ</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:23</p>
+                <p>Tanggal lahir:28-02-2009</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0098434904</p>
+            </div>
+            <div class="card">
+                <img src="24.KHOIRUL ANWAR.jpg"alt="24.KHOIRUL ANWAR">
+                <h3>KHOIRUL ANWAR</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:24</p>
+                <p>Tanggal lahir:17-02-2009</p>
+                <p>Alamat:Desa Wolutengah RT03 RW01 KEC.KEREK</p>
+                <p>NISN:0097959253</p>
+            </div>
+            <div class="card">
+                <img src="25.KOKO WAHYU BUDIANTO.jpg"alt="25.KOKO WAHYU BUDIANTO">
+                <h3>KOKO WAHYU BUDIANTO</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:25</p>
+                <p>Tanggal lahir:08-08-2008</p>
+                <p>Alamat:Desa Cokrowati KEC.TAMBAKBOYO</p>
+                <p>NISN:0082131696</p>
+            </div>
+            <div class="card">
+                <img src="26.M SHIHABUDDIN AL MUSAHHALI.jpg"alt="26.M SHIHABUDDIN AL MUSAHHALI">
+                <h3>M SHIHABUDDIN AL MUSAHHALI</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:26</p>
+                <p>Tanggal lahir:12-05-2008</p>
+                <p>Alamat:Desa Dasin RT05 RW04 KEC.TAMBAKBOYO</p>
+                <p>NISN:0082288885</p>
+            </div>
+            <div class="card">
+                <img src="27.MARIO ADJI PRASETYO.jpg"alt="27.MARIO ADJI PRASETYO">
+                <h3>MARIO ADJI PRASETYO</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:27</p>
+                <p>Tanggal lahir:10-07-2008</p>
+                <p>Alamat:Desa Socorejo RT01 RW02 KEC.JENU</p>
+                <p>NISN:3081023737</p>
+            </div>
+            <div class="card">
+                <img src="28.MIQDAL ALWI ABUL KHOIR.jpg"alt="28.MIQDAL ALWI ABUL KHOIR">
+                <h3>MIQDAL ALWI ABUL KHOIR</h3>
+                <p>Kelas: X-TPK1</p>
+                <p>No.Absen:28</p>
+                <p>Tanggal lahir:10-07-2009</p>
+                <p>Alamat:Dsn Binangun RT03 RW01 KEC.BANCAR</p>
+                <p>NISN:0093925319</p>
+            </div>
+            <div class="card">
+                <img src="29.MOH.IMAM SHOFA ARIF MAULANA.jpg"alt="29.MOH.IMAM SHOFA ARIF MAULANA">
+                <h3>MOH.IMAM SHOFA ARIF MAULANA</h3>
+                <p>Kelas: X_TPK1</p>
+                <p>No.Absen:29</p>
+                <p>Tanggal lahir:25-06-2008</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0098136043</p>
+            </div>
+            <div class="card">
+                <img src="30.MOH.RUDY CHOIRUN NADA.jpg"alt="30.MOH.RUDY CHOIRUN NADA">
+                <h3>MOH.RUDY CHOIRUN NADA</h3>
+                <p>Kelas: X_TPK1</p>
+                <p>No.Absen: 30</p>
+                <p>Tanggal lahir:06-08-2008</p>
+                <p>Alamat:Dsn Karang Tawang RT04 RW01 KEC.TAMBAKBOYO</p>
+                <p>NISN:3089559479</p>
+            </div>
+            <div class="card">
+                <img src="31.MOHAMMAD SYAIFUDDIN ASROR.jpg"alt="31.MOHAMMAD SYAIFUDDIN ASROR">
+                <h3>MOHAMMAD SYAIFUDDIN ASROR</h3>
+                <p>Kelas: X_TPK1</p>
+                <p>No.Absen: 31</p>
+                <p>Tanggal lahir:09-12-2008</p>
+                <p>Alamat:Desa Mliwang KEC.KEREK</p>
+                <p>NISN:0088303137</p>
+            </div>
+          </div>
+
+        <div id="guruCards" class="card-container">
+            <div class="card">
+                <img src="bu ula.jpg"alt="bu ula">
+                <h3>Bu Ula</h3>
+                <p>Jabatan: Guru Produktif TPK</p>
+            </div>
+            <div class="card">
+                <img src="bu tika.jpg"alt="abdul rokhim2">
+                <h3>Bu Tika</h3>
+                <p>Jabatan: Guru Bahasa Jawa</p>
+            </div>
+            <div class="card">
+                <img src="bu juangga2.jpg"alt="bu juangga">
+                <h3>Bu Juangga</h3>
+                <p>Jabatan: Guru Seni</p>
+            </div>
+            <div class="card">
+                <img src="pak agus.jpg"alt="pak agus">
+                <h3>Pak Agus</h3>
+                <p>Jabatan: Guru PJOK</p>
+            </div>
+            <div class="card">
+                <img src="wahyu ningsih.jpg"alt="wahyu ningsih">
+                <h3>Bu Wahyu Ningsih</h3>
+                <p>Jabatan: Guru Sejarah</p>
+            </div>
+            <div class="card">
+                <img src="wahyu tristinawati.jpg"alt="wahyu tristinawati">
+                <h3>Bu Wahyu Trisnawati</h3>
+                <p>Jabatan: Guru Matematika</p>
+            </div>
+            <div class="card">
+                <img src="bu arum2.jpg"alt="bu arum">
+                <h3>Bu Rumiatun</h3>
+                <p>Jabatan: Guru Bahasa Inggris</p>
+            </div>
+            <div class="card">
+                <img src="bu tutik.jpg"alt="bu tutik">
+                <h3>Bu Tutik</h3>
+                <p>Jabatan: Guru PPKN</p>
+            </div>
+            <div class="card">
+                <img src="bu novita3.jpg"alt="bu novita">
+                <h3>Bu Novita</h3>
+                <p>Jabatan: Guru BK</p>
+            </div>
+            <div class="card">
+                <img src="bu mira.jpg"alt="bu mira">
+                <h3>Bu Mira</h3>
+                <p>Jabatan: Guru Bahasa Indonesia</p>
+            </div>
+            <div class="card">
+                <img src="pak diin.jpg"alt="pak diin">
+                <h3>Pak Nurul Mubtadiin</h3>
+                <p>Jabatan: Guru PAI</p>
+            </div>
+            <div class="card">
+                <img src="pak arno.jpg"alt="pak arno">
+                <h3>Pak Arno</h3>
+                <p>Jabatan: Guru Informatika</p>
+            </div>
+            <div class="card">
+                <img src="pak umar said.jpg"alt="pak umar said">
+                <h3>Pak Umar Said</h3>
+                <p>Jabatan: Guru Ipas</p>
+            </div>
+        </div>
+
+        <div id="piketCards" class="card-container">
+            <div class="card">
+                <h3>Senin</h3>
+                <p> Rokim</p>
+                <p> Ain</p>
+                <p> Agus Mono</p>
+                <p> Agus Indra</p>
+                <p> Andy</p>
+                <p> Baim</p>
+                <p> Reyhan</p>
+                <p> Mada</p>
+            </div>
+            <div class="card">
+                <h3>Selasa</h3>
+                <p>Seluruh Siswa X_TPK1</p>
+            </div>
+            <div class="card">
+                <h3>Rabu</h3>
+                <p> Nur Rozin</p>
+                <p> Anan</p>
+                <p> Andika</p>
+                <p> Bagus K</p>
+                <p> Da'i</p>
+                <p> Dian</p>
+                <p> Dika Bagus</p>
+                <p> Dimas Ari</p>
+            </div>
+            <div class="card">
+                <h3>Kamis</h3>
+                <p> Dimas Putra</p>
+                <p> Dika Dwi Sefi</p>
+                <p> Feri</p>
+                <p> Hengki</p>
+                <p> Kamal</p>
+                <p> Aril</p>
+                <p> Amin</p>
+                <p> Khoirul Anwar</p>
+           </div>
+           <div class="card">
+                <h3>Jumat</h3>
+                <p> Koko</p>
+                <p> Syaifudin Asror</p>
+                <p> Arif M</p>
+                <p> Mikdal</p>
+                <p> Sihab</p>
+                <p> Mario</p>
+                <p> Rudi</p>
+           </div>
+        </div>
+
+        <div id="strukturCards" class="card-container">
+            <div class="card">
+                <img src="PAK AGUS2024-12-05 004154.jpg"alt="PAK AGUS2024-12-05 004154">
+                <h3>Kepala Sekolah</h3>
+                <p>Nama: Agus Siswanto S.Pd., M.Pd.</p>
+                <img src="pak teguh.jpg"alt="pak teguh">
+                <h3>Kepala Jurusan</h3>
+                <p>Nama:Teguh Raharjo S.T</p>
+                <img src="bu candra.jpg"alt="pak candra">
+                <h3>Wali Kelas</h3>
+                <p>Nama:Candra Wulandari,S.Pd</p>
+            </div>
+                <div class="card">
+                <img src="MOHAMMAD SYAIFUDDIN ASROR.jpg"alt="MOHAMMAD SYAIFUDDIN ASROR">
+                <h3>Ketua Kelas</h3>
+                <p>Nama:M. Syaifuddin Asror</p>
+                <img src="ANDIKA PRATAMA.jpg"alt="ANDIKA PRATAMA">
+                <h3>Wakil Ketua Kelas</h3>
+                <p>Nama:Andika Pratama</p>
+                <img src="KOKO WAHYU BUDIANTO.jpg"alt="KOKO WAHYU BUDIANTO">
+                <h3>Sekertaris</h3>
+                <p>Nama:Koko Wahyu B</p>
+                <img src="KAMAL YAIKA IBRAHIM.jpg"alt="KAMAL YAIKA IBRAHIM">
+                <h3>Bendahara</h3>
+                <p>Nama:Kamal Yaika I</p>
+
+
+            </div>
+         </div>
+
+        <div id="gallery" class="gallery">
+            <img src="gallery1.jpg"alt="gallery1">
+            <img src="gallery2.jpg"alt="gallery2">
+            <img src="gallery3.jpg"alt="gallery3">
+            </div>
+
+        <div id="jadwalPelajaran" class="card-container">
+            <table>
+                <tr>
+                    <th>Hari</th>
+                    <th>Pelajaran</th>
+                    <th>Waktu</th>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>PAI</td>
+                    <td>07:40 - 09:40</td>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Produktif TPK</td>
+                    <td>10:00 - 10:40</td>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Bin</td>
+                    <td>10:40 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Seni</td>
+                    <td>12:30 - 13:50</td>
+                </tr>
+                <tr>
+                    <td>Senin</td>
+                    <td>Informatika</td>
+                    <td>13:50 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>selasa</td>
+                    <td>Produktif</td>
+                    <td>07.00 - 15:10</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Mtk</td>
+                    <td>07:00 - 08:20</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Pjok</td>
+                    <td>08:20 - 10:40</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Big</td>
+                    <td>10:40 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>Bin</td>
+                    <td>12:30 - 13:50</td>
+                </tr>
+                <tr>
+                    <td>Rabu</td>
+                    <td>B.Jawa</td>
+                    <td>13:30 - 15:10</td>
+                    </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Ipas</td>
+                    <td>07:00 - 09:00</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Big</td>
+                    <td>09:00 - 10:40</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Ppkn</td>
+                    <td>10:40 - 12:00</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Informatika</td>
+                    <td>12:30 - 13:50</td>
+                </tr>
+                <tr>
+                    <td>Kamis</td>
+                    <td>Sejarah</td>
+                    <td>13:50 - 15:10</td>
+                    </tr>
+                <tr>
+                    <td>Jum'at</td>
+                    <td>Bk</td>
+                    <td>07:00 - 07:40</td>
+                </tr>
+                <tr>
+                    <td>Jum'at</td>
+                    <td>Ipas</td>
+                    <td>07:40 - 09:40</td>
+                </tr>
+                <tr>
+                    <td>Jum'at</td>
+                    <td>Mtk</td>
+                    <td>10:00 - 11:20</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="kegiatanKelas" class="card-container">
+            <h3>Kegiatan Kelas</h3>
+            <p>jum'at religius, class metting</p>
+        </div>
+    </div>
+</body>
+</html>

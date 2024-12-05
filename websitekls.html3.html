@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kelas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Data Siswa</a></li>
+            <li><a href="#" onclick="showPage('guru')">Data Guru Pengajar</a></li>
+            <li><a href="#" onclick="showPage('struktur')">Struktur Kelas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Halaman Data Siswa -->
+    <section id="home" class="page">
+        <h1>Data Siswa</h1>
+        <div id="student-cards" class="card-container"></div>
+    </section>
+
+    <!-- Halaman Data Guru Pengajar -->
+    <section id="guru" class="page" style="display:none;">
+        <h1>Data Guru Pengajar</h1>
+        <div id="teacher-cards" class="card-container"></div>
+    </section>
+
+    <!-- Halaman Struktur Kelas -->
+    <section id="struktur" class="page" style="display:none;">
+        <h1>Struktur Kelas</h1>
+
+        <h2>Kepala Sekolah & Kepala Jurusan</h2>
+        <div class="structure">
+            <p>Kepala Sekolah: Bapak Andi</p>
+            <p>Kepala Jurusan: Ibu Siti</p>
+        </div>
+
+        <h2>Daftar Piket</h2>
+        <ul>
+            <li>Senin: Siswa 1, Siswa 2</li>
+            <li>Selasa: Siswa 3, Siswa 4</li>
+            <li>Rabu: Siswa 5, Siswa 6</li>
+            <li>Kamis: Siswa 7, Siswa 8</li>
+            <li>Jumat: Siswa 9, Siswa 10</li>
+        </ul>
+
+        <h2>Jadwal Pelajaran</h2>
+        <table>
+            <tr>
+                <th>Hari</th>
+                <th>Mata Pelajaran</th>
+            </tr>
+            <tr>
+                <td>Senin</td>
+                <td>Matematika, Bahasa Indonesia</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>Biologi, Fisika</td>
+            </tr>
+            <!-- Tambahkan jadwal lainnya -->
+        </table>
+
+        <h2>Kegiatan Kelas</h2>
+        <p>Kegiatan: Kunjungan ke museum, Lomba antar kelas, dll.</p>
+
+        <h2>Gallery Foto</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/150" alt="Foto 1">
+            <img src="https://via.placeholder.com/150" alt="Foto 2">
+            <img src="https://via.placeholder.com/150" alt="Foto 3">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

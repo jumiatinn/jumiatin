@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Siswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Data Siswa</h1>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Foto Siswa">
+            <h2>Nama Siswa 1</h2>
+            <p>Usia: 17 tahun</p>
+            <p>Kelas: XII IPA</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Foto Siswa">
+            <h2>Nama Siswa 2</h2>
+            <p>Usia: 16 tahun</p>
+            <p>Kelas: XI IPS</p>
+        </div>
+
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Foto Siswa">
+            <h2>Nama Siswa 3</h2>
+            <p>Usia: 15 tahun</p>
+            <p>Kelas: X IPA</p>
+        </div>
+    </div>
+</body>
+</html>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #666;
+}
